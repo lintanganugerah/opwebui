@@ -5,7 +5,7 @@
 
 ## Purpose
 
-End-to-end test suite for Open WebUI using Cypress. Tests cover the core user flows: registration and login, chat with Ollama models, settings management, and document handling. The suite is configured to run against a local instance at `localhost:8080` with video recording enabled.
+End-to-end test suite for Arsa using Cypress. Tests cover the core user flows: registration and login, chat with Ollama models, settings management, and document handling. The suite is configured to run against a local instance at `localhost:8080` with video recording enabled.
 
 ## Key Files
 
@@ -43,7 +43,7 @@ End-to-end test suite for Open WebUI using Cypress. Tests cover the core user fl
 ### Testing Requirements
 
 - Run tests with `npm run cy:open` (interactive) or `npx cypress run` (headless CI mode).
-- A running Open WebUI instance with Ollama connected is required for chat tests to pass.
+- A running Arsa instance with Ollama connected is required for chat tests to pass.
 - Video is enabled by default; output goes to `cypress/videos/`.
 
 ### Common Patterns

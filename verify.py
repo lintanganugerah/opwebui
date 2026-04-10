@@ -1,9 +1,9 @@
 import re
 
-with open("ref/openwebui-branding-inventory.md", "r") as f:
+with open("ref/arsa-branding-inventory.md", "r") as f:
     inventory = f.read()
 
-with open("ref/openwebui-branding-summary.md", "r") as f:
+with open("ref/arsa-branding-summary.md", "r") as f:
     summary = f.read()
 
 import subprocess

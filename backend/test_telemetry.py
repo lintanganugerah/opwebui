@@ -82,7 +82,7 @@ async def test_no_unauthorized_telemetry():
     routines attempt to phone home to unauthorized domains.
     """
     # Simply importing the main app triggers a lot of initialization
-    from open_webui.main import app
+    from arsa.main import app
     
     # We can also start up a test client to trigger startup events
     from httpx import AsyncClient

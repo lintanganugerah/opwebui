@@ -60,7 +60,7 @@ Static assets served directly to the browser without processing. Contains fonts,
 ### Internal
 
 - `src/` consumes these assets at runtime via static URL paths.
-- Backend (`backend/open_webui/main.py`) mounts this directory as a static files route.
+- Backend (`backend/arsa/main.py`) mounts this directory as a static files route.
 - SvelteKit build copies files from here into the `build/` output directory.
 
 ### External

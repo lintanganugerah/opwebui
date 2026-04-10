@@ -25,7 +25,7 @@ Test fixtures and static resources used by integration and end-to-end tests. Thi
 ### Working In This Directory
 
 - This directory contains static test fixtures only. There are no Python test modules here.
-- Backend Python tests live under `backend/open_webui/` and are run with `pytest` from the `backend/` directory.
+- Backend Python tests live under `backend/arsa/` and are run with `pytest` from the `backend/` directory.
 - Frontend unit tests are colocated with source files under `src/` and run via `npm run test:frontend`.
 - Cypress end-to-end tests live under `cypress/`.
 

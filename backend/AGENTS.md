@@ -5,20 +5,20 @@
 
 ## Purpose
 
-The Python/FastAPI backend for ARSA. It exposes a REST API and WebSocket layer that powers chat interactions, RAG retrieval, user authentication, model management, file storage, image generation, audio processing, and admin configuration. The application is served by Uvicorn and can run as a standalone pip package or inside a Docker container. The main package lives at `open_webui/`, with the FastAPI app factory in `__init__.py` and the route wiring in `main.py`.
+The Python/FastAPI backend for ARSA. It exposes a REST API and WebSocket layer that powers chat interactions, RAG retrieval, user authentication, model management, file storage, image generation, audio processing, and admin configuration. The application is served by Uvicorn and can run as a standalone pip package or inside a Docker container. The main package lives at `arsa/`, with the FastAPI app factory in `__init__.py` and the route wiring in `main.py`.
 
 ## Key Files
 
 | File | Description |
 |------|-------------|
-| `open_webui/__init__.py` | CLI entry point via Typer. Handles `arsa serve` and `arsa dev` commands, secret key generation, and CUDA setup. |
-| `open_webui/main.py` | FastAPI application setup. Mounts routers, middleware (CORS, session, compression, audit logging), static files, and the Socket.IO app. ~2600 lines. |
-| `open_webui/config.py` | Central configuration: environment variable loading, Pydantic settings models, database connection helpers, OAuth provider setup, feature flags. ~4000 lines. |
-| `open_webui/env.py` | Environment bootstrap. Resolves directory paths, loads `.env`, configures logging, Redis, device type (CPU/CUDA), and exports global constants like `DATA_DIR`, `VERSION`. |
-| `open_webui/constants.py` | Enum constants for error messages, webhook messages, and user-facing strings. |
-| `open_webui/tasks.py` | Async task management with Redis pub/sub. Tracks background tasks (generation, stop commands) across workers. |
-| `open_webui/functions.py` | Function (plugin) execution engine. Loads and runs user-defined Python functions, handles streaming responses, valve configuration. |
-| `open_webui/alembic.ini` | Alembic migration configuration pointing to the SQLAlchemy database URL. |
+| `arsa/__init__.py` | CLI entry point via Typer. Handles `arsa serve` and `arsa dev` commands, secret key generation, and CUDA setup. |
+| `arsa/main.py` | FastAPI application setup. Mounts routers, middleware (CORS, session, compression, audit logging), static files, and the Socket.IO app. ~2600 lines. |
+| `arsa/config.py` | Central configuration: environment variable loading, Pydantic settings models, database connection helpers, OAuth provider setup, feature flags. ~4000 lines. |
+| `arsa/env.py` | Environment bootstrap. Resolves directory paths, loads `.env`, configures logging, Redis, device type (CPU/CUDA), and exports global constants like `DATA_DIR`, `VERSION`. |
+| `arsa/constants.py` | Enum constants for error messages, webhook messages, and user-facing strings. |
+| `arsa/tasks.py` | Async task management with Redis pub/sub. Tracks background tasks (generation, stop commands) across workers. |
+| `arsa/functions.py` | Function (plugin) execution engine. Loads and runs user-defined Python functions, handles streaming responses, valve configuration. |
+| `arsa/alembic.ini` | Alembic migration configuration pointing to the SQLAlchemy database URL. |
 | `requirements.txt` | Full Python dependency list (FastAPI, SQLAlchemy, LangChain, ChromaDB, OpenAI/Anthropic/Google SDKs, and ~100 other packages). |
 | `requirements-min.txt` | Minimal dependency subset for lightweight Docker images. |
 | `dev.sh` | Development launcher. Sets CORS origins for the Vite dev server and runs uvicorn with `--reload`. |
@@ -29,34 +29,34 @@ The Python/FastAPI backend for ARSA. It exposes a REST API and WebSocket layer t
 
 | Directory | Purpose |
 |-----------|---------|
-| `open_webui/routers/` | FastAPI route modules. Each file is a router (auths, chats, ollama, openai, retrieval, images, audio, configs, users, etc.). 28 routers total. |
-| `open_webui/models/` | SQLAlchemy/Pydantic model definitions and database access functions for each entity (auths, chats, files, knowledge, memories, models, users, etc.). 22 model files. |
-| `open_webui/retrieval/` | RAG pipeline: document loaders, embedding/vector DB integrations, web search providers, and reranker models. |
-| `open_webui/retrieval/loaders/` | Document content extractors (main loader, YouTube, Mistral OCR, Tika/external, Tavily, Marker, MinerU). |
-| `open_webui/retrieval/vector/` | Vector database abstraction layer with factory pattern. Supports ChromaDB, PGVector, Milvus, Qdrant, Weaviate, Elasticsearch, OpenSearch, Pinecone, S3Vector, Oracle 23ai, and more. |
-| `open_webui/retrieval/web/` | Web search provider integrations (SearXNG, Google PSE, Brave, DuckDuckGo, Kagi, Tavily, Perplexity, Exa, Bing, Jina, and ~20 others). |
-| `open_webui/retrieval/models/` | Reranker model implementations (ColBERT, external rerankers). |
-| `open_webui/socket/` | Socket.IO server for real-time features: chat streaming, model usage tracking, session management, periodic cleanup tasks. |
-| `open_webui/internal/` | Internal database layer: SQLAlchemy base, session factory (`get_db`), and legacy Peewee migrations (18 migration files). |
-| `open_webui/migrations/` | Alembic migration environment. Holds `env.py`, migration templates, and `versions/` directory for migration scripts. |
-| `open_webui/utils/` | Shared utilities: auth, OAuth, embeddings, rate limiting, Redis helpers, PDF generation, code interpreter, MCP client, sanitization, webhooks, telemetry, image generation (ComfyUI), audit logging, and more. |
-| `open_webui/utils/access_control/` | Permission checking utilities for file-level access control. |
-| `open_webui/utils/images/` | ComfyUI integration for local image generation. |
-| `open_webui/utils/mcp/` | Model Context Protocol client for tool/function integration. |
-| `open_webui/utils/telemetry/` | OpenTelemetry setup: instrumentors, metrics, logs, and traces for production observability. |
-| `open_webui/storage/` | File storage provider abstraction (local filesystem, S3, GCS, Azure Blob). |
-| `open_webui/tools/` | Built-in tool definitions for the LLM tool-calling system. |
-| `open_webui/test/` | Backend test suite: test apps and utility tests. |
-| `open_webui/static/` | Static assets served by the backend: favicons, fonts, custom CSS, swagger-ui, and the built frontend (`assets/`). |
-| `open_webui/data/` | Runtime data placeholder (database, uploads). Contains a readme noting its purpose for Docker volumes. |
+| `arsa/routers/` | FastAPI route modules. Each file is a router (auths, chats, ollama, openai, retrieval, images, audio, configs, users, etc.). 28 routers total. |
+| `arsa/models/` | SQLAlchemy/Pydantic model definitions and database access functions for each entity (auths, chats, files, knowledge, memories, models, users, etc.). 22 model files. |
+| `arsa/retrieval/` | RAG pipeline: document loaders, embedding/vector DB integrations, web search providers, and reranker models. |
+| `arsa/retrieval/loaders/` | Document content extractors (main loader, YouTube, Mistral OCR, Tika/external, Tavily, Marker, MinerU). |
+| `arsa/retrieval/vector/` | Vector database abstraction layer with factory pattern. Supports ChromaDB, PGVector, Milvus, Qdrant, Weaviate, Elasticsearch, OpenSearch, Pinecone, S3Vector, Oracle 23ai, and more. |
+| `arsa/retrieval/web/` | Web search provider integrations (SearXNG, Google PSE, Brave, DuckDuckGo, Kagi, Tavily, Perplexity, Exa, Bing, Jina, and ~20 others). |
+| `arsa/retrieval/models/` | Reranker model implementations (ColBERT, external rerankers). |
+| `arsa/socket/` | Socket.IO server for real-time features: chat streaming, model usage tracking, session management, periodic cleanup tasks. |
+| `arsa/internal/` | Internal database layer: SQLAlchemy base, session factory (`get_db`), and legacy Peewee migrations (18 migration files). |
+| `arsa/migrations/` | Alembic migration environment. Holds `env.py`, migration templates, and `versions/` directory for migration scripts. |
+| `arsa/utils/` | Shared utilities: auth, OAuth, embeddings, rate limiting, Redis helpers, PDF generation, code interpreter, MCP client, sanitization, webhooks, telemetry, image generation (ComfyUI), audit logging, and more. |
+| `arsa/utils/access_control/` | Permission checking utilities for file-level access control. |
+| `arsa/utils/images/` | ComfyUI integration for local image generation. |
+| `arsa/utils/mcp/` | Model Context Protocol client for tool/function integration. |
+| `arsa/utils/telemetry/` | OpenTelemetry setup: instrumentors, metrics, logs, and traces for production observability. |
+| `arsa/storage/` | File storage provider abstraction (local filesystem, S3, GCS, Azure Blob). |
+| `arsa/tools/` | Built-in tool definitions for the LLM tool-calling system. |
+| `arsa/test/` | Backend test suite: test apps and utility tests. |
+| `arsa/static/` | Static assets served by the backend: favicons, fonts, custom CSS, swagger-ui, and the built frontend (`assets/`). |
+| `arsa/data/` | Runtime data placeholder (database, uploads). Contains a readme noting its purpose for Docker volumes. |
 | `data/` | Docker volume mount point for persistent storage (database, uploads, documents). Contains a readme describing its role. |
 
 ## For AI Agents
 
 ### Working In This Directory
 
-- The backend runs as the `open_webui` Python package. Install dependencies from `requirements.txt` before making changes.
-- Entry point: `open_webui/__init__.py` defines the Typer CLI. The FastAPI `app` object is created in `open_webui/main.py`.
+- The backend runs as the `arsa` Python package. Install dependencies from `requirements.txt` before making changes.
+- Entry point: `arsa/__init__.py` defines the Typer CLI. The FastAPI `app` object is created in `arsa/main.py`.
 - For local development, use `dev.sh`. It sets CORS for the Vite frontend (`localhost:5173`) and enables hot reload.
 - All routers are registered in `main.py`. When adding a new feature, create a router file in `routers/` and import it in `main.py`.
 - Database models live in `models/`. Each model file defines both the SQLAlchemy table and Pydantic schemas, plus CRUD helper functions.
@@ -66,7 +66,7 @@ The Python/FastAPI backend for ARSA. It exposes a REST API and WebSocket layer t
 ### Testing Requirements
 
 - Run tests with `pytest` from the `backend/` directory.
-- Test files live in `open_webui/test/`.
+- Test files live in `arsa/test/`.
 - Docker-based integration tests use `pytest-docker` for spinning up test databases.
 - Lint with `pylint` (invoked via `npm run lint` from the project root).
 

@@ -170,7 +170,7 @@ all = [
 ]
 
 [project.scripts]
-arsa = "open_webui:app"
+arsa = "arsa:app"
 
 [build-system]
 requires = ["hatchling"]
@@ -202,7 +202,7 @@ exclude = [
     "webui.db",
     "chroma.sqlite3",
 ]
-force-include = { "CHANGELOG.md" = "open_webui/CHANGELOG.md", build = "open_webui/frontend" }
+force-include = { "CHANGELOG.md" = "arsa/CHANGELOG.md", build = "arsa/frontend" }
 
 [tool.codespell]
 # Ref: https://github.com/codespell-project/codespell#using-a-config-file

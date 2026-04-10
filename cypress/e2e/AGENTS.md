@@ -5,7 +5,7 @@
 
 ## Purpose
 
-Cypress end-to-end test specifications for Open WebUI. Each file covers a distinct feature area: chat interactions with Ollama models, user registration and login, settings management, and document handling. Specs run against a live Open WebUI instance at `localhost:8080` and exercise real UI flows using a combination of aria-label selectors, CSS classes, and button text matching.
+Cypress end-to-end test specifications for Arsa. Each file covers a distinct feature area: chat interactions with Ollama models, user registration and login, settings management, and document handling. Specs run against a live Arsa instance at `localhost:8080` and exercise real UI flows using a combination of aria-label selectors, CSS classes, and button text matching.
 
 ## Key Files
 
@@ -36,7 +36,7 @@ No subdirectories. All spec files sit directly in this folder.
 ### Testing Requirements
 
 - Run with `npm run cy:open` (interactive mode) or `npx cypress run` (headless).
-- A running Open WebUI instance with an Ollama connection is required for `chat.cy.ts` tests to pass.
+- A running Arsa instance with an Ollama connection is required for `chat.cy.ts` tests to pass.
 - The registration spec needs either a clean database or an environment where the admin user already exists with admin privileges.
 
 ### Common Patterns

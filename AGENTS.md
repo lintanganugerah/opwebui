@@ -1,10 +1,10 @@
 <!-- Generated: 2026-04-10 | Updated: 2026-04-10 -->
 
-# Open WebUI
+# Arsa
 
 ## Purpose
 
-Open WebUI is an extensible, feature-rich, self-hosted AI platform designed to operate entirely offline. It supports LLM runners like Ollama and OpenAI-compatible APIs, with built-in inference for RAG. The project combines a Python/FastAPI backend with a SvelteKit frontend, shipped via Docker and installable through pip. Version 0.8.12.
+Arsa is an extensible, feature-rich, self-hosted AI platform designed to operate entirely offline. It supports LLM runners like Ollama and OpenAI-compatible APIs, with built-in inference for RAG. The project combines a Python/FastAPI backend with a SvelteKit frontend, shipped via Docker and installable through pip. Version 0.8.12.
 
 ## Key Files
 
@@ -50,7 +50,7 @@ Open WebUI is an extensible, feature-rich, self-hosted AI platform designed to o
 - This is a monorepo with two tech stacks: Python backend (`backend/`) and TypeScript/Svelte frontend (`src/`).
 - The frontend builds to a `build/` directory via `npm run build`, which the backend then serves as static files.
 - Always install both npm and Python dependencies before making changes.
-- The backend entry point is `backend/open_webui/main.py`. The app factory is in `backend/open_webui/__init__.py`.
+- The backend entry point is `backend/arsa/main.py`. The app factory is in `backend/arsa/__init__.py`.
 - Frontend dev server runs via `npm run dev` (Vite on port 5173). Backend dev runs via `backend/dev.sh`.
 - Version is defined in `package.json` and read by `pyproject.toml` via Hatch. Do not update them independently.
 
@@ -65,9 +65,9 @@ Open WebUI is an extensible, feature-rich, self-hosted AI platform designed to o
 ### Common Patterns
 
 - Frontend uses Svelte 5 with runes (`$state`, `$derived`, `$effect`).
-- Backend uses FastAPI routers under `backend/open_webui/routers/`.
-- Database migrations managed by Alembic (`backend/open_webui/migrations/`).
-- Socket.IO for real-time features (`backend/open_webui/socket/`).
+- Backend uses FastAPI routers under `backend/arsa/routers/`.
+- Database migrations managed by Alembic (`backend/arsa/migrations/`).
+- Socket.IO for real-time features (`backend/arsa/socket/`).
 - API client functions live in `src/lib/apis/`.
 - Shared TypeScript types in `src/lib/types/`.
 - i18n translations in `src/lib/i18n/`.
