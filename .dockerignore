@@ -1,4 +1,7 @@
 .github
+.git
+.omx
+.opencode
 .DS_Store
 docs
 kubernetes
@@ -17,4 +20,8 @@ uploads
 .ipynb_checkpoints
 **/*.db
 _test
+cypress
+ref
+test
 backend/data/*
+verify.py

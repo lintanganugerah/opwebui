@@ -6,7 +6,7 @@ else
 endif
 
 install:
-	$(DOCKER_COMPOSE) up -d
+	$(DOCKER_COMPOSE) up -d --build
 
 remove:
 	@chmod +x confirm_remove.sh
