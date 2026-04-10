@@ -5,13 +5,13 @@
 
 ## Purpose
 
-The Python/FastAPI backend for Open WebUI. It exposes a REST API and WebSocket layer that powers chat interactions, RAG retrieval, user authentication, model management, file storage, image generation, audio processing, and admin configuration. The application is served by Uvicorn and can run as a standalone pip package or inside a Docker container. The main package lives at `open_webui/`, with the FastAPI app factory in `__init__.py` and the route wiring in `main.py`.
+The Python/FastAPI backend for ARSA. It exposes a REST API and WebSocket layer that powers chat interactions, RAG retrieval, user authentication, model management, file storage, image generation, audio processing, and admin configuration. The application is served by Uvicorn and can run as a standalone pip package or inside a Docker container. The main package lives at `open_webui/`, with the FastAPI app factory in `__init__.py` and the route wiring in `main.py`.
 
 ## Key Files
 
 | File | Description |
 |------|-------------|
-| `open_webui/__init__.py` | CLI entry point via Typer. Handles `open-webui serve` and `open-webui dev` commands, secret key generation, and CUDA setup. |
+| `open_webui/__init__.py` | CLI entry point via Typer. Handles `arsa serve` and `arsa dev` commands, secret key generation, and CUDA setup. |
 | `open_webui/main.py` | FastAPI application setup. Mounts routers, middleware (CORS, session, compression, audit logging), static files, and the Socket.IO app. ~2600 lines. |
 | `open_webui/config.py` | Central configuration: environment variable loading, Pydantic settings models, database connection helpers, OAuth provider setup, feature flags. ~4000 lines. |
 | `open_webui/env.py` | Environment bootstrap. Resolves directory paths, loads `.env`, configures logging, Redis, device type (CPU/CUDA), and exports global constants like `DATA_DIR`, `VERSION`. |

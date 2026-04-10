@@ -152,7 +152,7 @@ async def get_headers_and_cookies(
         'Content-Type': 'application/json',
         **(
             {
-                'HTTP-Referer': 'https://openwebui.com/',
+                'HTTP-Referer': 'https://arsa.com/',
                 'X-Title': 'ARSA',
             }
             if 'openrouter.ai' in url

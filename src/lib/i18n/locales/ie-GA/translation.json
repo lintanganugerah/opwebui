@@ -1430,7 +1430,7 @@
 	"ARSA uses faster-whisper internally.": "Úsáideann ARSA cogar níos tapúla go hinmheánach.",
 	"ARSA uses SpeechT5 and CMU Arctic speaker embeddings.": "Úsáideann ARSA úsáidí SpeechT5 agus CMU leabaithe cainteoir Artach.",
 	"ARSA version": "Oscail leagan WebUI",
-	"ARSA version (v{{OPEN_WEBUI_VERSION}}) is lower than required version (v{{REQUIRED_VERSION}})": "Tá leagan WebUI oscailte (v{{OPEN_WEBUI_VERSION}}) níos ísle ná an leagan riachtanach (v{{REQUIRED_VERSION}})",
+	"ARSA version (v{{ARSA_VERSION}}) is lower than required version (v{{REQUIRED_VERSION}})": "Tá leagan WebUI oscailte (v{{ARSA_VERSION}}) níos ísle ná an leagan riachtanach (v{{REQUIRED_VERSION}})",
 	"OpenAI": "OpenAI",
 	"OpenAI API": "API OpenAI",
 	"OpenAI API Base URL": "Bun-URL API OpenAI",

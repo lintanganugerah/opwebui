@@ -1432,7 +1432,7 @@
 	"ARSA uses faster-whisper internally.": "ARSA interne používa faster-whisper.",
 	"ARSA uses SpeechT5 and CMU Arctic speaker embeddings.": "",
 	"ARSA version": "",
-	"ARSA version (v{{OPEN_WEBUI_VERSION}}) is lower than required version (v{{REQUIRED_VERSION}})": "Verzia ARSA (v{{OPEN_WEBUI_VERSION}}) je nižšia ako požadovaná verzia (v{{REQUIRED_VERSION}})",
+	"ARSA version (v{{ARSA_VERSION}}) is lower than required version (v{{REQUIRED_VERSION}})": "Verzia ARSA (v{{ARSA_VERSION}}) je nižšia ako požadovaná verzia (v{{REQUIRED_VERSION}})",
 	"OpenAI": "OpenAI je výskumná organizácia zameraná na umelú inteligenciu, ktorá je známa vývojom pokročilých jazykových modelov, ako je napríklad GPT. Tieto modely sa využívajú v rôznych aplikáciách, vrátane konverzačných agentov a jazykových nástrojov.",
 	"OpenAI API": "OpenAI API je rozhranie aplikačného programovania, ktoré umožňuje vývojárom integrovať pokročilé jazykové modely do svojich aplikácií.",
 	"OpenAI API Base URL": "",

@@ -212,7 +212,7 @@
 
 							<a
 								class="flex-shrink-0 text-xs font-medium underline"
-								href="https://docs.openwebui.com/"
+								href="https://docs.arsa.com/"
 								target="_blank"
 							>
 								{$i18n.t('Documentation')}
@@ -224,7 +224,7 @@
 								<a href="https://discord.gg/5rJgQTnV4s" target="_blank">
 									<img
 										alt="Discord"
-										src="https://img.shields.io/badge/Discord-Open_WebUI-blue?logo=discord&logoColor=white"
+										src="https://img.shields.io/badge/Discord-ARSA-blue?logo=discord&logoColor=white"
 									/>
 								</a>
 
@@ -254,7 +254,7 @@
 
 								{#if $config?.license_metadata}
 									<a
-										href="https://docs.openwebui.com/enterprise"
+										href="https://docs.arsa.com/enterprise"
 										target="_blank"
 										class="text-gray-500 mt-0.5"
 									>
@@ -279,7 +279,7 @@
 								{:else}
 									<a
 										class=" text-xs hover:underline"
-										href="https://docs.openwebui.com/enterprise"
+										href="https://docs.arsa.com/enterprise"
 										target="_blank"
 									>
 										<span class="text-gray-500">
@@ -421,7 +421,7 @@
 
 								<div class="mt-2 text-xs text-gray-400 dark:text-gray-500">
 									<a
-										href="https://docs.openwebui.com/reference/api-endpoints"
+										href="https://docs.arsa.com/reference/api-endpoints"
 										target="_blank"
 										class=" text-gray-300 font-medium underline"
 									>
@@ -462,7 +462,7 @@
 										<span class=" font-medium">{$i18n.t('Warning')}:</span>
 										<span
 											><a
-												href="https://docs.openwebui.com/reference/env-configuration#jwt_expires_in"
+												href="https://docs.arsa.com/reference/env-configuration#jwt_expires_in"
 												target="_blank"
 												class=" underline"
 												>{$i18n.t('No expiration can pose security risks.')}

@@ -2,7 +2,7 @@
 name = "arsa"
 description = "ARSA"
 authors = [
-    { name = "Timothy Jaeryang Baek", email = "tim@openwebui.com" }
+    { name = "Timothy Jaeryang Baek", email = "tim@arsa.com" }
 ]
 license = { file = "LICENSE" }
 dependencies = [

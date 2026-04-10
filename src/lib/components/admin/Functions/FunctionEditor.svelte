@@ -112,7 +112,7 @@ class Filter:
 
 	const _boilerplate = `from pydantic import BaseModel
 from typing import Optional, Union, Generator, Iterator
-from open_webui.utils.misc import get_last_user_message
+from arsa.utils.misc import get_last_user_message
 
 import os
 import requests

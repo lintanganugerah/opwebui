@@ -10,17 +10,17 @@ services:
     restart: unless-stopped
     image: ollama/ollama:${OLLAMA_DOCKER_TAG-latest}
 
-  open-webui:
+  arsa:
     build:
       context: .
       dockerfile: Dockerfile
       args:
         USE_SLIM: ${USE_SLIM-true}
-    container_name: open-webui
+    container_name: arsa
     volumes:
-      - open-webui:/app/backend/data
+      - arsa:/app/backend/data
     ports:
-      - ${OPEN_WEBUI_PORT-3000}:8080
+      - ${ARSA_PORT-3000}:8080
     environment:
       ENABLE_OLLAMA_API: ${ENABLE_OLLAMA_API-false}
       ENABLE_OPENAI_API: ${ENABLE_OPENAI_API-true}
@@ -33,4 +33,4 @@ services:
 
 volumes:
   ollama: {}
-  open-webui: {}
+  arsa: {}

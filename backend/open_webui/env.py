@@ -129,7 +129,7 @@ WEBUI_NAME = os.environ.get('WEBUI_NAME', 'ARSA')
 if WEBUI_NAME != 'ARSA':
     WEBUI_NAME += ' (ARSA)'
 
-WEBUI_FAVICON_URL = 'https://openwebui.com/favicon.png'
+WEBUI_FAVICON_URL = 'https://arsa.com/favicon.png'
 
 TRUSTED_SIGNATURE_KEY = os.environ.get('TRUSTED_SIGNATURE_KEY', '')
 

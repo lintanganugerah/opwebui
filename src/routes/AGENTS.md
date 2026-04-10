@@ -5,7 +5,7 @@
 
 ## Purpose
 
-SvelteKit file-based routing directory for Open WebUI. Every subdirectory maps to a URL path segment, and SvelteKit's convention of `+page.svelte`, `+layout.svelte`, and `+layout.js` files defines pages, nested layouts, and route options. The root layout (`+layout.svelte`) bootstraps the entire application: socket.io, i18n, theme handling, and all global Svelte stores. SSR is disabled at the root (`+layout.js` sets `export const ssr = false`), making this a client-side SPA.
+SvelteKit file-based routing directory for ARSA. Every subdirectory maps to a URL path segment, and SvelteKit's convention of `+page.svelte`, `+layout.svelte`, and `+layout.js` files defines pages, nested layouts, and route options. The root layout (`+layout.svelte`) bootstraps the entire application: socket.io, i18n, theme handling, and all global Svelte stores. SSR is disabled at the root (`+layout.js` sets `export const ssr = false`), making this a client-side SPA.
 
 ## Key Files
 

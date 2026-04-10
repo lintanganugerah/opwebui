@@ -5,7 +5,7 @@
 
 ## Purpose
 
-The core Python package for Open WebUI's backend. Contains the FastAPI application factory, all API route handlers, database models, RAG retrieval pipeline, WebSocket layer, migration system, storage abstraction, and shared utilities. This is the package that gets installed via pip and runs inside Docker. The Typer CLI entry point lives in `__init__.py`, and the full FastAPI app wiring is in `main.py`.
+The core Python package for ARSA's backend. Contains the FastAPI application factory, all API route handlers, database models, RAG retrieval pipeline, WebSocket layer, migration system, storage abstraction, and shared utilities. This is the package that gets installed via pip and runs inside Docker. The Typer CLI entry point lives in `__init__.py`, and the full FastAPI app wiring is in `main.py`.
 
 ## Key Files
 

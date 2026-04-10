@@ -757,7 +757,7 @@
 
 	const windowMessageEventHandler = async (event) => {
 		if (
-			!['https://openwebui.com', 'https://www.openwebui.com', 'http://localhost:9999'].includes(
+			!['https://arsa.com', 'https://www.arsa.com', 'http://localhost:9999'].includes(
 				event.origin
 			)
 		) {

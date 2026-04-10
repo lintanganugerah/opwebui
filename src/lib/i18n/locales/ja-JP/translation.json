@@ -1429,7 +1429,7 @@
 	"ARSA uses faster-whisper internally.": "ARSA は内部でfaster-whisperを使用します。",
 	"ARSA uses SpeechT5 and CMU Arctic speaker embeddings.": "ARSA は SpeechT5とCMU Arctic スピーカー埋め込みを使用します。",
 	"ARSA version": "",
-	"ARSA version (v{{OPEN_WEBUI_VERSION}}) is lower than required version (v{{REQUIRED_VERSION}})": "ARSA のバージョン (v{{OPEN_WEBUI_VERSION}}) は要求されたバージョン (v{{REQUIRED_VERSION}}) より低いです。",
+	"ARSA version (v{{ARSA_VERSION}}) is lower than required version (v{{REQUIRED_VERSION}})": "ARSA のバージョン (v{{ARSA_VERSION}}) は要求されたバージョン (v{{REQUIRED_VERSION}}) より低いです。",
 	"OpenAI": "OpenAI",
 	"OpenAI API": "OpenAI API",
 	"OpenAI API Base URL": "",

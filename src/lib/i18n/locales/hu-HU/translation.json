@@ -1430,7 +1430,7 @@
 	"ARSA uses faster-whisper internally.": "Az ARSA belsőleg a faster-whispert használja.",
 	"ARSA uses SpeechT5 and CMU Arctic speaker embeddings.": "Az ARSA a SpeechT5-öt és a CMU Arctic hangszóró beágyazásokat használja.",
 	"ARSA version": "",
-	"ARSA version (v{{OPEN_WEBUI_VERSION}}) is lower than required version (v{{REQUIRED_VERSION}})": "Az ARSA verzió (v{{OPEN_WEBUI_VERSION}}) alacsonyabb, mint a szükséges verzió (v{{REQUIRED_VERSION}})",
+	"ARSA version (v{{ARSA_VERSION}}) is lower than required version (v{{REQUIRED_VERSION}})": "Az ARSA verzió (v{{ARSA_VERSION}}) alacsonyabb, mint a szükséges verzió (v{{REQUIRED_VERSION}})",
 	"OpenAI": "OpenAI",
 	"OpenAI API": "OpenAI API",
 	"OpenAI API Base URL": "",

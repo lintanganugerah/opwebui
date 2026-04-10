@@ -5,7 +5,7 @@
 
 ## Purpose
 
-Build and utility scripts for the Open WebUI project. These scripts handle offline preparation of the Pyodide Python runtime (used for browser-based code execution) and CycloneDX Software Bill of Materials (SBOM) generation from resolved dependency manifests. They run as part of the build pipeline or on-demand in CI.
+Build and utility scripts for the ARSA project. These scripts handle offline preparation of the Pyodide Python runtime (used for browser-based code execution) and CycloneDX Software Bill of Materials (SBOM) generation from resolved dependency manifests. They run as part of the build pipeline or on-demand in CI.
 
 ## Key Files
 

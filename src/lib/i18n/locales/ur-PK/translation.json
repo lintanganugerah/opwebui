@@ -1430,7 +1430,7 @@
 	"ARSA uses faster-whisper internally.": "اوپن ویب یو آئی اندرونی طور پر فاسٹر وِسپر استعمال کرتا ہے",
 	"ARSA uses SpeechT5 and CMU Arctic speaker embeddings.": "",
 	"ARSA version": "",
-	"ARSA version (v{{OPEN_WEBUI_VERSION}}) is lower than required version (v{{REQUIRED_VERSION}})": "اوپن WebUI ورژن (v{{OPEN_WEBUI_VERSION}}) مطلوبہ ورژن (v{{REQUIRED_VERSION}}) سے کم ہے",
+	"ARSA version (v{{ARSA_VERSION}}) is lower than required version (v{{REQUIRED_VERSION}})": "اوپن WebUI ورژن (v{{ARSA_VERSION}}) مطلوبہ ورژن (v{{REQUIRED_VERSION}}) سے کم ہے",
 	"OpenAI": "اوپن اے آئی",
 	"OpenAI API": "اوپن اے آئی اے پی آئی\n",
 	"OpenAI API Base URL": "",

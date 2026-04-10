@@ -5,7 +5,7 @@
 
 ## Purpose
 
-Project documentation for Open WebUI. Contains guides for contributors, security policy, deployment configuration, and workflow diagrams. These files live alongside the source code and are referenced by GitHub issue templates, pull request templates, and community onboarding flows.
+Project documentation for ARSA. Contains guides for contributors, security policy, deployment configuration, and workflow diagrams. These files live alongside the source code and are referenced by GitHub issue templates, pull request templates, and community onboarding flows.
 
 ## Key Files
 
@@ -14,7 +14,7 @@ Project documentation for Open WebUI. Contains guides for contributors, security
 | `CONTRIBUTING.md` | Contribution guide covering issue reporting, pull request workflow, i18n translation process, and scope of support. Referenced by GitHub community files. |
 | `SECURITY.md` | Security policy defining supported versions, vulnerability reporting rules, PoC requirements, and disclosure policy. Last updated 2026-03-20. |
 | `README.md` | Project workflow diagram rendered via Mermaid, showing the development and release process visually. |
-| `apache.md` | Guide for hosting Open WebUI and Ollama on separate servers behind an Apache reverse proxy, including SSL setup with certbot. |
+| `apache.md` | Guide for hosting ARSA and Ollama on separate servers behind an Apache reverse proxy, including SSL setup with certbot. |
 
 ## Subdirectories
 
@@ -26,7 +26,7 @@ None. All documentation files are at the top level of this directory.
 
 - These are human-facing markdown documents. When updating them, match the existing tone and formatting conventions.
 - `SECURITY.md` has strict content rules (vulnerability reporting requirements). Do not soften or rephrase its policy language.
-- `CONTRIBUTING.md` references paths like `src/lib/i18n/locales` and external repos like `open-webui/docs`. Verify those paths still exist before editing references.
+- `CONTRIBUTING.md` references paths like `src/lib/i18n/locales` and external repos like `arsa/docs`. Verify those paths still exist before editing references.
 - The Mermaid diagram in `README.md` is encoded as a pako-compressed URL. To update it, edit the source at mermaid.live and replace both the image URL and the edit link.
 
 ### Testing Requirements
@@ -38,7 +38,7 @@ None. All documentation files are at the top level of this directory.
 ### Common Patterns
 
 - GitHub-flavored markdown with admonition blocks (`> [!NOTE]`, `> [!WARNING]`, `> [!IMPORTANT]`).
-- External documentation lives in a separate repository at `github.com/open-webui/docs`. This directory only contains in-repo docs.
+- External documentation lives in a separate repository at `github.com/lintanganugerah/docs`. This directory only contains in-repo docs.
 - Security policy uses numbered rules with bold headings.
 
 ## Dependencies
@@ -50,6 +50,6 @@ None. All documentation files are at the top level of this directory.
 
 ### External
 
-- External documentation site: `docs.openwebui.com` (separate repository at `github.com/open-webui/docs`).
+- External documentation site: `docs.arsa.com` (separate repository at `github.com/lintanganugerah/docs`).
 - GitHub Security Advisories for vulnerability reporting.
 - Ollama documentation and FAQ referenced in `apache.md`.

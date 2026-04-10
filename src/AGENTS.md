@@ -5,7 +5,7 @@
 
 ## Purpose
 
-SvelteKit frontend source for Open WebUI. Contains all routes, components, API clients, stores, types, utilities, and global styles that make up the browser-facing application. The frontend builds to a static `build/` directory via `npm run build`, which the Python backend serves.
+SvelteKit frontend source for ARSA. Contains all routes, components, API clients, stores, types, utilities, and global styles that make up the browser-facing application. The frontend builds to a static `build/` directory via `npm run build`, which the Python backend serves.
 
 ## Key Files
 

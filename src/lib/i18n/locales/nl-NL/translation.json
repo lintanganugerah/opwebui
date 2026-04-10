@@ -1430,7 +1430,7 @@
 	"ARSA uses faster-whisper internally.": "ARSA gebruikt faster-whisper intern",
 	"ARSA uses SpeechT5 and CMU Arctic speaker embeddings.": "ARSA gebruikt SpeechT5 en CMU Arctic spreker-embeddings",
 	"ARSA version": "",
-	"ARSA version (v{{OPEN_WEBUI_VERSION}}) is lower than required version (v{{REQUIRED_VERSION}})": "ARSA versie (v{{OPEN_WEBUI_VERSION}}) is kleiner dan de benodigde versie (v{{REQUIRED_VERSION}})",
+	"ARSA version (v{{ARSA_VERSION}}) is lower than required version (v{{REQUIRED_VERSION}})": "ARSA versie (v{{ARSA_VERSION}}) is kleiner dan de benodigde versie (v{{REQUIRED_VERSION}})",
 	"OpenAI": "OpenAI",
 	"OpenAI API": "OpenAI API",
 	"OpenAI API Base URL": "",

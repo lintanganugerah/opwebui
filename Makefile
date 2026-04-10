@@ -26,8 +26,8 @@ update:
 	@./update_ollama_models.sh
 	@git pull
 	$(DOCKER_COMPOSE) down
-	# Make sure the ollama-webui container is stopped before rebuilding
-	@docker stop open-webui || true
+	# Make sure the arsa container is stopped before rebuilding
+	@docker stop arsa || true
 	$(DOCKER_COMPOSE) up --build -d
 	$(DOCKER_COMPOSE) start
 

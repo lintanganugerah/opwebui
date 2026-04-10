@@ -1429,7 +1429,7 @@
 	"ARSA uses faster-whisper internally.": "ARSA ใช้ faster-whisper อยู่ภายใน",
 	"ARSA uses SpeechT5 and CMU Arctic speaker embeddings.": "ARSA ใช้ SpeechT5 และ Embedding เสียงผู้พูด CMU Arctic",
 	"ARSA version": "",
-	"ARSA version (v{{OPEN_WEBUI_VERSION}}) is lower than required version (v{{REQUIRED_VERSION}})": "เวอร์ชัน ARSA (v{{OPEN_WEBUI_VERSION}}) ต่ำกว่าเวอร์ชันที่ต้องการ (v{{REQUIRED_VERSION}})",
+	"ARSA version (v{{ARSA_VERSION}}) is lower than required version (v{{REQUIRED_VERSION}})": "เวอร์ชัน ARSA (v{{ARSA_VERSION}}) ต่ำกว่าเวอร์ชันที่ต้องการ (v{{REQUIRED_VERSION}})",
 	"OpenAI": "OpenAI",
 	"OpenAI API": "OpenAI API",
 	"OpenAI API Base URL": "Base URL ของ OpenAI API",
