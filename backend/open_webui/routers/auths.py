@@ -1211,7 +1211,7 @@ async def token_exchange(
     db: Session = Depends(get_session),
 ):
     """
-    Exchange an external OAuth provider token for an OpenWebUI JWT.
+    Exchange an external OAuth provider token for an ARSA JWT.
     This endpoint is disabled by default. Set ENABLE_OAUTH_TOKEN_EXCHANGE=True to enable.
     """
     if not ENABLE_OAUTH_TOKEN_EXCHANGE:

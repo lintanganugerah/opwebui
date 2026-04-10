@@ -31,7 +31,7 @@ OPEN_WEBUI_DIR = ENV_FILE_PATH.parent
 # BACKEND_DIR is the parent of OPEN_WEBUI_DIR (backend/)
 BACKEND_DIR = OPEN_WEBUI_DIR.parent
 
-# BASE_DIR is the parent of BACKEND_DIR (open-webui-dev/)
+# BASE_DIR is the parent of BACKEND_DIR (arsa-dev/)
 BASE_DIR = BACKEND_DIR.parent
 
 try:
@@ -125,9 +125,9 @@ if 'cuda_error' in locals():
 
 SRC_LOG_LEVELS = {}  # Legacy variable, do not remove
 
-WEBUI_NAME = os.environ.get('WEBUI_NAME', 'Open WebUI')
-if WEBUI_NAME != 'Open WebUI':
-    WEBUI_NAME += ' (Open WebUI)'
+WEBUI_NAME = os.environ.get('WEBUI_NAME', 'ARSA')
+if WEBUI_NAME != 'ARSA':
+    WEBUI_NAME += ' (ARSA)'
 
 WEBUI_FAVICON_URL = 'https://openwebui.com/favicon.png'
 
@@ -142,7 +142,7 @@ ENV = os.environ.get('ENV', 'dev')
 FROM_INIT_PY = os.environ.get('FROM_INIT_PY', 'False').lower() == 'true'
 
 if FROM_INIT_PY:
-    PACKAGE_DATA = {'version': importlib.metadata.version('open-webui')}
+    PACKAGE_DATA = {'version': importlib.metadata.version('arsa')}
 else:
     try:
         PACKAGE_DATA = json.loads((BASE_DIR / 'package.json').read_text())
@@ -231,16 +231,16 @@ SAFE_MODE = os.environ.get('SAFE_MODE', 'false').lower() == 'true'
 ENABLE_FORWARD_USER_INFO_HEADERS = os.environ.get('ENABLE_FORWARD_USER_INFO_HEADERS', 'False').lower() == 'true'
 
 # Header names for user info forwarding (customizable via environment variables)
-FORWARD_USER_INFO_HEADER_USER_NAME = os.environ.get('FORWARD_USER_INFO_HEADER_USER_NAME', 'X-OpenWebUI-User-Name')
-FORWARD_USER_INFO_HEADER_USER_ID = os.environ.get('FORWARD_USER_INFO_HEADER_USER_ID', 'X-OpenWebUI-User-Id')
-FORWARD_USER_INFO_HEADER_USER_EMAIL = os.environ.get('FORWARD_USER_INFO_HEADER_USER_EMAIL', 'X-OpenWebUI-User-Email')
-FORWARD_USER_INFO_HEADER_USER_ROLE = os.environ.get('FORWARD_USER_INFO_HEADER_USER_ROLE', 'X-OpenWebUI-User-Role')
+FORWARD_USER_INFO_HEADER_USER_NAME = os.environ.get('FORWARD_USER_INFO_HEADER_USER_NAME', 'X-ARSA-User-Name')
+FORWARD_USER_INFO_HEADER_USER_ID = os.environ.get('FORWARD_USER_INFO_HEADER_USER_ID', 'X-ARSA-User-Id')
+FORWARD_USER_INFO_HEADER_USER_EMAIL = os.environ.get('FORWARD_USER_INFO_HEADER_USER_EMAIL', 'X-ARSA-User-Email')
+FORWARD_USER_INFO_HEADER_USER_ROLE = os.environ.get('FORWARD_USER_INFO_HEADER_USER_ROLE', 'X-ARSA-User-Role')
 
 # Header name for chat ID forwarding (customizable via environment variable)
 FORWARD_SESSION_INFO_HEADER_MESSAGE_ID = os.environ.get(
-    'FORWARD_SESSION_INFO_HEADER_MESSAGE_ID', 'X-OpenWebUI-Message-Id'
+    'FORWARD_SESSION_INFO_HEADER_MESSAGE_ID', 'X-ARSA-Message-Id'
 )
-FORWARD_SESSION_INFO_HEADER_CHAT_ID = os.environ.get('FORWARD_SESSION_INFO_HEADER_CHAT_ID', 'X-OpenWebUI-Chat-Id')
+FORWARD_SESSION_INFO_HEADER_CHAT_ID = os.environ.get('FORWARD_SESSION_INFO_HEADER_CHAT_ID', 'X-ARSA-Chat-Id')
 
 # Experimental feature, may be removed in future
 ENABLE_STAR_SESSIONS_MIDDLEWARE = os.environ.get('ENABLE_STAR_SESSIONS_MIDDLEWARE', 'False').lower() == 'true'
@@ -404,7 +404,7 @@ RAG_SYSTEM_CONTEXT = os.environ.get('RAG_SYSTEM_CONTEXT', 'False').lower() == 't
 REDIS_URL = os.environ.get('REDIS_URL', '')
 REDIS_CLUSTER = os.environ.get('REDIS_CLUSTER', 'False').lower() == 'true'
 
-REDIS_KEY_PREFIX = os.environ.get('REDIS_KEY_PREFIX', 'open-webui')
+REDIS_KEY_PREFIX = os.environ.get('REDIS_KEY_PREFIX', 'arsa')
 
 REDIS_SENTINEL_HOSTS = os.environ.get('REDIS_SENTINEL_HOSTS', '')
 REDIS_SENTINEL_PORT = os.environ.get('REDIS_SENTINEL_PORT', '26379')
@@ -541,7 +541,7 @@ OAUTH_SESSION_TOKEN_ENCRYPTION_KEY = os.environ.get('OAUTH_SESSION_TOKEN_ENCRYPT
 OAUTH_MAX_SESSIONS_PER_USER = int(os.environ.get('OAUTH_MAX_SESSIONS_PER_USER', '10'))
 
 # Token Exchange Configuration
-# Allows external apps to exchange OAuth tokens for OpenWebUI tokens
+# Allows external apps to exchange OAuth tokens for ARSA tokens
 ENABLE_OAUTH_TOKEN_EXCHANGE = os.environ.get('ENABLE_OAUTH_TOKEN_EXCHANGE', 'False').lower() == 'true'
 
 ####################################
@@ -894,7 +894,7 @@ OTEL_METRICS_EXPORTER_OTLP_INSECURE = (
 OTEL_LOGS_EXPORTER_OTLP_INSECURE = (
     os.environ.get('OTEL_LOGS_EXPORTER_OTLP_INSECURE', str(OTEL_EXPORTER_OTLP_INSECURE)).lower() == 'true'
 )
-OTEL_SERVICE_NAME = os.environ.get('OTEL_SERVICE_NAME', 'open-webui')
+OTEL_SERVICE_NAME = os.environ.get('OTEL_SERVICE_NAME', 'arsa')
 OTEL_RESOURCE_ATTRIBUTES = os.environ.get('OTEL_RESOURCE_ATTRIBUTES', '')  # e.g. key1=val1,key2=val2
 OTEL_TRACES_SAMPLER = os.environ.get('OTEL_TRACES_SAMPLER', 'parentbased_always_on').lower()
 OTEL_BASIC_AUTH_USERNAME = os.environ.get('OTEL_BASIC_AUTH_USERNAME', '')

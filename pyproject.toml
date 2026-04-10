@@ -1,6 +1,6 @@
 [project]
-name = "open-webui"
-description = "Open WebUI"
+name = "arsa"
+description = "ARSA"
 authors = [
     { name = "Timothy Jaeryang Baek", email = "tim@openwebui.com" }
 ]
@@ -170,7 +170,7 @@ all = [
 ]
 
 [project.scripts]
-open-webui = "open_webui:app"
+arsa = "open_webui:app"
 
 [build-system]
 requires = ["hatchling"]

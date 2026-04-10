@@ -162,7 +162,7 @@
 
 									{#if $config?.features?.enable_version_update_check}
 										<a
-											href="https://github.com/open-webui/open-webui/releases/tag/v{version.latest}"
+											href="https://github.com/arsa/arsa/releases/tag/v{version.latest}"
 											target="_blank"
 										>
 											{updateAvailable === null
@@ -206,7 +206,7 @@
 									{$i18n.t('Help')}
 								</div>
 								<div class=" text-xs text-gray-500">
-									{$i18n.t('Discover how to use Open WebUI and seek support from the community.')}
+									{$i18n.t('Discover how to use ARSA and seek support from the community.')}
 								</div>
 							</div>
 
@@ -228,17 +228,17 @@
 									/>
 								</a>
 
-								<a href="https://twitter.com/OpenWebUI" target="_blank">
+								<a href="https://twitter.com/ARSA" target="_blank">
 									<img
 										alt="X (formerly Twitter) Follow"
-										src="https://img.shields.io/twitter/follow/OpenWebUI"
+										src="https://img.shields.io/twitter/follow/ARSA"
 									/>
 								</a>
 
-								<a href="https://github.com/open-webui/open-webui" target="_blank">
+								<a href="https://github.com/arsa/arsa" target="_blank">
 									<img
 										alt="Github Repo"
-										src="https://img.shields.io/github/stars/open-webui/open-webui?style=social&label=Star us on Github"
+										src="https://img.shields.io/github/stars/arsa/arsa?style=social&label=Star us on Github"
 									/>
 								</a>
 							</div>

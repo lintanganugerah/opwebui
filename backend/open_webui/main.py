@@ -601,7 +601,7 @@ if LOG_FORMAT != 'json':
 
 v{VERSION} - building the best AI user interface.
 {f'Commit: {WEBUI_BUILD_HASH}' if WEBUI_BUILD_HASH != 'dev-build' else ''}
-https://github.com/open-webui/open-webui
+https://github.com/arsa/arsa
 """)
 
 
@@ -709,7 +709,7 @@ async def lifespan(app: FastAPI):
 
 
 app = FastAPI(
-    title='Open WebUI',
+    title='ARSA',
     docs_url='/docs' if ENV == 'dev' else None,
     openapi_url='/openapi.json' if ENV == 'dev' else None,
     redoc_url=None,
@@ -719,7 +719,7 @@ app = FastAPI(
 # Used by readiness checks to gate traffic until startup work is done.
 app.state.startup_complete = False
 
-# For Open WebUI OIDC/OAuth2
+# For ARSA OIDC/OAuth2
 oauth_manager = OAuthManager(app)
 app.state.oauth_manager = oauth_manager
 
@@ -1907,7 +1907,7 @@ async def generate_messages(
     pipeline, then converts the response back to Anthropic Messages format.
 
     Supports both streaming and non-streaming requests.
-    All models configured in Open WebUI are accessible via this endpoint.
+    All models configured in ARSA are accessible via this endpoint.
 
     Authentication: Supports both standard Authorization header and
     Anthropic's x-api-key header (via middleware translation).
@@ -2206,7 +2206,7 @@ async def get_app_latest_release_version(user=Depends(get_verified_user)):
         timeout = aiohttp.ClientTimeout(total=1)
         async with aiohttp.ClientSession(timeout=timeout, trust_env=True) as session:
             async with session.get(
-                'https://api.github.com/repos/open-webui/open-webui/releases/latest',
+                'https://api.github.com/repos/arsa/arsa/releases/latest',
                 ssl=AIOHTTP_CLIENT_SESSION_SSL,
             ) as response:
                 response.raise_for_status()
@@ -2227,7 +2227,7 @@ async def get_app_changelog():
 @app.get('/api/usage')
 async def get_current_usage(user=Depends(get_verified_user)):
     """
-    Get current usage statistics for Open WebUI.
+    Get current usage statistics for ARSA.
     This is an experimental endpoint and subject to change.
     """
     try:
